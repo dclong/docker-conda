@@ -4,8 +4,8 @@ FROM dclong/base
 
 ENV PATH=/opt/conda/bin:$PATH
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get -y update \
+    && apt-get -y install --no-install-recommends \
         gcc \
     && /scripts/sys/purge_cache.sh
       
